@@ -1,0 +1,133 @@
+header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background-color: #151e26;
+  color: white;
+
+  padding: 8px 1rem;
+
+  .logo {
+    margin-left: 1rem;
+    padding-right: 2rem;
+    border-right: 1px solid white;
+    font-family: "Dosis", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav.team-menu {
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    ul.team-menu-list {
+      display: flex;
+      align-items: center;
+
+      li.team-menu-list-item {
+        cursor: pointer;
+        margin-right: 1.5rem;
+        font-size: 15px;
+      }
+    }
+  }
+  nav.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul.user-menu-list {
+      display: flex;
+      align-items: center;
+
+      li.user-menu-list-item {
+        cursor: pointer;
+        margin-right: 1.5rem;
+
+        .notif {
+          position: relative;
+          i {
+            font-size: 1.8rem;
+          }
+          .counter {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 100%;
+            background-color: red;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+        }
+
+        label.user {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          .profile-pic {
+            user-select: none;
+            height: 3rem;
+            width: 3rem;
+            margin-right: 1rem;
+            border-radius: 100%;
+            background-color: #fbbaa8;
+            color: black;
+            font-weight: 600;
+          }
+          .user-name {
+            user-select: none;
+          }
+          input {
+            display: none;
+
+            + .user-dropdown {
+              display: none;
+
+              position: absolute;
+              top: 4.2rem;
+              right: 0;
+
+              background-color: white;
+              color: black;
+
+              ul {
+                padding: 5px 0;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+
+                overflow: hidden;
+                li {
+                  padding: 0.7rem 1.5rem;
+                  color: #7b889b;
+
+                  &:hover {
+                    background-color: #20c0e7;
+                    color: white;
+                  }
+                }
+              }
+            }
+            &:checked + .user-dropdown {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

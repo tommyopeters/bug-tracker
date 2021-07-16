@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  //   position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.image-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+  &.vertical {
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+}

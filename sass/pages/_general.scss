@@ -1,0 +1,49 @@
+main {
+  section.project {
+    .project-header {
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: white;
+
+      .project-name {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        font-size: 2.4rem;
+        font-weight: 300;
+      }
+      .actions {
+        .add-task {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          background-color: #00c0e9;
+          font-weight: normal;
+          margin-right: 10px;
+          border: 1px solid #00c0e9;
+          color: white;
+          border-radius: 24px;
+          padding: 10px 15px;
+        }
+      }
+    }
+    .project-body {
+      display: flex;
+
+      height: calc(100vh - 12rem);
+
+      aside {
+        height: 100%;
+        width: 20rem;
+
+        background-color: white;
+        .collapsed {
+          width: 4rem;
+        }
+      }
+    }
+  }
+}

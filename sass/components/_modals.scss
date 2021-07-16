@@ -1,0 +1,556 @@
+#inserted-modal.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+
+  z-index: 99999999;
+  overflow-y: auto;
+  .modal-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .modal-content {
+    // position: relative;
+    // padding: 2.8rem;
+    // min-width: 400px;
+    // min-height: 300px;
+    // background-color: white;
+    // border-radius: 2px;
+    // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07), 0 3px 15px 0 rgba(0, 0, 0, 0.15);
+
+    .modal-close {
+      position: absolute;
+      top: 0px;
+      right: 0;
+      font-size: 2.5rem;
+      line-height: 1.8rem;
+      padding: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+#ola-modal {
+  padding: 9rem 0 0;
+  .modal-content {
+    max-width: 48rem;
+
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07), 0 3px 15px 0 rgba(0, 0, 0, 0.15);
+
+    .modal-body {
+      // margin-top: 4rem;
+      height: 100%;
+
+      &-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem 1.6rem 2rem;
+
+        .chat {
+          margin-top: 4rem;
+          flex-grow: 1;
+          height: 100%;
+          overflow-y: auto;
+          .ola-message {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            column-gap: 8px;
+            .image-control {
+              height: 3.2rem;
+              width: 3.2rem;
+              border-radius: 100%;
+              margin-top: 8px;
+            }
+          }
+          .message-block {
+            width: 100%;
+            margin-bottom: 1.6rem;
+            display: flex;
+            flex-direction: column;
+
+            & > div:not(:last-child) {
+              margin-bottom: 8px;
+            }
+
+            .chat-row {
+              min-width: 7rem;
+              max-width: 26rem;
+              padding: 1.2rem;
+              border-radius: 1.2rem;
+              line-height: 2rem;
+            }
+            &.out {
+              align-items: flex-end;
+              .chat-row {
+                background-color: #e8ffdc;
+                border-bottom-right-radius: 4px;
+              }
+            }
+            &.in {
+              align-items: flex-start;
+              .chat-row {
+                background-color: #f1f3f5;
+                border-bottom-left-radius: 4px;
+              }
+            }
+          }
+        }
+        .text-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #063a79;
+          border-radius: 8px;
+          margin-top: 1.6rem;
+          padding: 1.2rem;
+          box-shadow: 0 1px 3px 0 rgba(2, 14, 30, 0.1);
+
+          input {
+            flex-grow: 1;
+            margin-right: 1rem;
+            font-size: 1.6rem;
+            border: none;
+            outline: none;
+          }
+          i {
+            font-size: 2rem;
+            color: #034391;
+          }
+        }
+      }
+    }
+  }
+}
+#farm-crop-modal {
+  align-items: flex-start;
+  padding: 5rem;
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
+  background: rgba(0, 0, 0, 0.6);
+  .modal-body {
+    position: relative;
+
+    .image-control {
+    }
+    .modal-close {
+      padding: 0;
+      left: 100%;
+      transform: translateX(20px);
+      color: white;
+    }
+  }
+}
+.mini {
+  background: rgba(4, 20, 39, 0.87);
+  .modal-content {
+    position: relative;
+    background-color: white;
+    width: 32rem;
+    padding: 2rem;
+
+    border-radius: 13px;
+    box-shadow: 0 3px 15px 0 rgba(2, 14, 30, 0.21);
+
+    .modal-header {
+      h4 {
+        color: rgba(1, 10, 21, 0.51);
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.8rem;
+      }
+    }
+    .modal-body {
+      margin-top: 2rem;
+      h3 {
+        margin-bottom: 1.5rem;
+        color: #010a15;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      p {
+        opacity: 0.87;
+        color: #010a15;
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 21px;
+      }
+    }
+    .modal-close {
+      padding: 2rem;
+    }
+  }
+}
+#about-stock-modal {
+  .modal-content {
+    .modal-body {
+      p {
+        margin-bottom: 3rem;
+      }
+      .about-blocks {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        column-gap: 3rem;
+
+        small {
+          opacity: 0.44;
+          color: #041427;
+          font-size: 12px;
+        }
+        p {
+          color: #041427;
+          font-family: Inter;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+#key-people-modal {
+  .modal-content {
+    .modal-body {
+      margin-top: 3rem;
+      .key-people {
+        .person {
+          margin-bottom: 3rem;
+          display: flex;
+          align-items: center;
+
+          &-image {
+            width: 4.8rem;
+            height: 4.8rem;
+
+            margin-right: 2.5rem;
+          }
+          &-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .person-name {
+              opacity: 0.87;
+              color: #010a15;
+              font-size: 14px;
+              font-weight: 600;
+              margin-bottom: 3px;
+            }
+            .person-post {
+              opacity: 0.67;
+              color: #010a15;
+              font-size: 14px;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#expert-opinion-modal {
+  .modal-content {
+    .modal-body {
+      margin-top: 3rem;
+      .buy-or-sell {
+        margin: 1rem 0 3.5rem;
+        padding: 0 5px;
+        display: flex;
+        align-items: stretch;
+
+        &.positive {
+          .sell {
+            .big {
+              display: none;
+            }
+            .small {
+              display: flex;
+            }
+            .action-icon {
+              padding-bottom: 4px;
+              .small {
+                height: 2.1rem;
+              }
+            }
+          }
+          .buy {
+            .big {
+              display: flex;
+            }
+            .small {
+              display: none;
+            }
+            .action-name {
+              color: #0ba50d;
+              font-weight: 600;
+            }
+          }
+        }
+        &.negative {
+          .buy {
+            .big {
+              display: none;
+            }
+            .small {
+              display: flex;
+            }
+            .action-icon {
+              padding-bottom: 4px;
+            }
+          }
+          .sell {
+            .big {
+              display: flex;
+            }
+            .small {
+              display: none;
+            }
+            .action-name {
+              color: #f44545;
+              font-weight: 600;
+            }
+          }
+        }
+        &.neutral {
+          .sell {
+            .action-icon {
+              .small {
+                height: 2.1rem;
+              }
+            }
+          }
+          .buy,
+          .sell {
+            .big {
+              display: none;
+            }
+            .small {
+              display: flex;
+            }
+            .action-icon {
+              padding-bottom: 4px;
+            }
+          }
+          .visualizer {
+            margin-top: 1.5rem;
+            .action-name {
+              color: #f1d311;
+              font-weight: 600;
+            }
+          }
+        }
+        .action-name {
+          margin-top: 5px;
+          color: #839083;
+          font-size: 14px;
+        }
+        &-action {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .action-icon {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .image-control {
+              img {
+                width: auto;
+                height: 100%;
+              }
+              &.big {
+                height: 4rem;
+              }
+              &.small {
+                height: 2.4rem;
+              }
+            }
+          }
+        }
+        .visualizer {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0 8px;
+
+          .progress {
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 1.4rem;
+            &-bar {
+              position: relative;
+              height: 6px;
+              width: 100%;
+              border-radius: 4px;
+              background: linear-gradient(270deg, #0ba50d 0%, #f1d311 48.52%, #f33131 100%);
+
+              .marker {
+                height: 2rem;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                transform: translate(-50%, -90%);
+
+                img {
+                  width: auto;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .opinion-list {
+        li {
+          margin-bottom: 4rem;
+          display: flex;
+          align-items: center;
+          .stock-image {
+            position: relative;
+            height: 4.4rem;
+            width: 4.4rem;
+            border-radius: 2px;
+            overflow: visible;
+            .expert-image {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 100%;
+              position: absolute;
+              // top: 100%;
+              // left: 100%;
+              bottom: 0;
+              right: 0;
+              transform: translate(50%, 40%);
+            }
+          }
+          .stock-details {
+            margin-left: 2.6rem;
+            flex-grow: 1;
+            .stock-name {
+              color: #000a16;
+              font-size: 14px;
+              font-weight: 600;
+            }
+            small {
+              color: rgba(0, 10, 23, 0.79);
+              font-size: 12px;
+              opacity: 1;
+            }
+          }
+          .action {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            &.buy {
+              color: #0ba50d;
+            }
+            &.hold {
+              color: #f2bf00;
+            }
+            &.sell {
+              color: #f44545;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#market-info-modal {
+  .modal-content {
+    .modal-body {
+      margin-top: 4rem;
+      .market-info-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4rem;
+        .market-info-block {
+          color: #041427;
+          small {
+            opacity: 0.44;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+          p {
+            color: #041427;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+#about-estate-modal {
+  .modal-content {
+    .modal-body {
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      p {
+        opacity: 0.87;
+        color: #010a15;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 21px;
+        margin-bottom: 2rem;
+      }
+      .detail-boxes {
+        margin: 3.3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        .detail-box {
+          p {
+            color: #041427;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .detail-icons {
+            display: grid;
+            grid-template-columns: 3rem max-content;
+            align-items: center;
+            column-gap: 1rem;
+
+            span {
+              opacity: 0.36;
+              color: #041427;
+              font-size: 24px;
+
+              &.checkmark {
+                color: rgb(11, 165, 13);
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8509b10269.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">SankoreBugTracker</div>
+        <nav class="team-menu">
+          <ul class="team-menu-list">
+            <li class="team-menu-list-item">Dashboard</li>
+            <li class="team-menu-list-item">Project</li>
+            <li class="team-menu-list-item">Team</li>
+            <li class="team-menu-list-item">Settings</li>
+          </ul>
+        </nav>
+        <nav class="user-menu">
+          <ul class="user-menu-list">
+            <li class="user-menu-list-item">
+              <div class="notif"><i class="fas fa-bell"></i> <span class="counter">3</span></div>
+            </li>
+            <li class="user-menu-list-item">
+              <label class="user">
+                <div class="profile-pic image-control vertical">
+                  <!-- <img src="" alt=""> -->
+                  TO
+                </div>
+                <span class="user-name">Tommy O'Peters</span>
+                <input type="checkbox" name="user-dropdown" id="user-dropdown" />
+                <div class="user-dropdown">
+                  <ul>
+                    <li>Edit Your Profile</li>
+                    <li>Log Out</li>
+                  </ul>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="project">
+          <div class="project-header">
+            <div class="project-name">Ligare</div>
+            <div class="actions">
+              <div class="add-task">+ Add a new task</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <aside class="project-menu">
+              <div class="project-menu-header">
+                <span class="project-settings">
+                  <i class="far fa-cog"></i>
+                  Project Settings
+                </span>
+                <span class="collapse-menu">
+                  <i class="fas fa-arrow-left"></i>
+                </span>
+              </div>
+              <div class="project-menu-body">
+                <div class="project-menu-section">
+                  <div class="project-menu-section-header">
+                    <span class="title">Members</span>
+                    <span class="edit">edit</span>
+                  </div>
+                  <div class="porject-section-body">
+                    <ul>
+                      <li>
+                        <div class="user-icon">TO</div>
+                        <span class="user-name">Tommy O'Peters</span>
+                      </li>
+                      <li>
+                        <div class="user-icon">LY</div>
+                        <span class="user-name">Lois Yisa</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-menu-section">
+                  <div class="project-menu-section-header">
+                    <span class="title">Guests</span>
+                    <span class="edit">edit</span>
+                  </div>
+                  <div class="porject-section-body">
+                    <ul>
+                      <li>
+                        <div class="user-icon">TO</div>
+                        <span class="user-name">Tommy O'Peters</span>
+                      </li>
+                      <li>
+                        <div class="user-icon">LY</div>
+                        <span class="user-name">Lois Yisa</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-menu-section">
+                  <div class="project-menu-section-header">
+                    <span class="title">Tags</span>
+                    <span class="edit">edit</span>
+                  </div>
+                  <div class="porject-section-body">
+                    <ul class="tags">
+                      <li>
+                        <span class="tag">sfg</span>
+                        <span class="couner">0/1</span>
+                      </li>
+                      <li>
+                        <span class="tag">sfg</span>
+                        <span class="couner">0/1</span>
+                      </li>
+                      <li>
+                        <span class="tag">sfg</span>
+                        <span class="couner">0/1</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class="project-body">
+              <div class="project-body-header">
+                <nav>
+                  <ul>
+                    <li><i class="fas fa-mouse"></i>Feedback</li>
+                    <li><i class="fas fa-board"></i>Task Board</li>
+                    <li><i class="fas fa-archive"></i>Archive</li>
+                  </ul>
+                </nav>
+                <div class="search">
+                  <div class="input-group">
+                    <i class="fas fa-search"></i>
+                    <div class="search-group">
+                      <i class="fas fa-close"></i>
+                      <span class="search-group-name"> ASSIGNED: </span>
+                      <div class="search-dropdown">
+                        <ul>
+                          <li>Tommy O' Peters</li>
+                          <li>Ikechuckwu Collins</li>
+                          <li>Gbemileke Ogunbanwo</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="i fas fa-close"></div>
+                  </div>
+                </div>
+                <div class="sort">
+                  Sort by <i class="fas fa-caret-down"></i>
+                  <div class="sort-dropdown">
+                    <ul>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-field">severity</span></li>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-field">due date</span></li>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-field">time created</span></li>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-field">assigned to</span></li>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-field">last modified</span></li>
+                    </ul>
+                    <ul>
+                      <li><input type="checkbox" name="" id="" /><span class="sort-direction">descending order</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
