@@ -1238,7 +1238,9 @@ main section.project .project-header {
     display: flex;
     align-items: center;
     font-size: 2.4rem;
-    font-weight: 300; }
+    font-weight: 600;
+    font-family: "Dosis", sans-serif;
+    color: #20c0e7; }
   main section.project .project-header .actions .add-task {
     cursor: pointer;
     display: flex;
@@ -1400,7 +1402,8 @@ main section.project .project-body {
           width: 25rem;
           display: flex;
           flex-direction: column;
-          background-color: #e6e9e9; }
+          background-color: #e6e9e9;
+          overflow-y: auto; }
           main section.project .project-body .project-details-body .project-details-columns .project-column:nth-of-type(even) {
             background-color: #ebeff0; }
           main section.project .project-body .project-details-body .project-details-columns .project-column.add-column {
@@ -1522,3 +1525,55 @@ main section.project .project-body {
                     background-color: #fbbaa8;
                     color: black;
                     font-weight: 600; }
+
+main section.projects .projects-header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 5rem;
+  padding: 2rem;
+  background-color: white; }
+  main section.projects .projects-header .projects-search {
+    width: 35rem;
+    padding: 0.6rem 1rem;
+    background-color: white;
+    border: 1px solid #d9d9d9; }
+    main section.projects .projects-header .projects-search i {
+      margin-right: 1rem; }
+    main section.projects .projects-header .projects-search input {
+      border: none;
+      outline: none; }
+  main section.projects .projects-header .add-projects .btn {
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #20c0e7;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-right: 10px;
+    border: 1px solid #20c0e7;
+    color: white;
+    border-radius: 24px;
+    padding: 5px 1rem; }
+
+main section.projects .projects-body {
+  padding: 5rem 30rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem; }
+  main section.projects .projects-body .project {
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none; }
+    main section.projects .projects-body .project-name {
+      margin: 1rem 0;
+      font-family: "Dosis", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #20c0e7; }
+    main section.projects .projects-body .project-details {
+      font-size: 1.2rem;
+      color: rgba(0, 0, 0, 0.65098); }
