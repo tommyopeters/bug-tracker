@@ -18,6 +18,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    span {
+      &:nth-of-type(1) {
+        color: #cecb9a;
+      }
+      &:nth-of-type(2) {
+        color: #20c0e7;
+      }
+      &:nth-of-type(3) {
+        color: #cecb9a;
+      }
+    }
   }
   nav.team-menu {
     margin-left: 3rem;

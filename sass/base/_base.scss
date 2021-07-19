@@ -16,6 +16,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   //   position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
